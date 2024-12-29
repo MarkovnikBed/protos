@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package sum;
+
+option go_package="github.com/MarkovnikBed/protos/sum";
+
+service Sum {
+    rpc AddNumbers(request) returns (response);
+}
+
+
+message request {
+   int64 A=1;
+   int64 B=2;
+}
+
+message response {
+    int64 result=1;
+}
